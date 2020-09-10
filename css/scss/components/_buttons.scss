@@ -1,0 +1,21 @@
+/*main button styles*/
+
+.btn{
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin:1rem;
+    color:#fff;
+    border: none;
+    max-width: 200px;
+    text-align: center;
+    transition: all ease-in-out .25s;
+    background-color: $primaryColor;
+    &:hover{
+        transform: scale(1.1);
+    }
+    &:active{
+        transform: scale(.9);
+    }
+}

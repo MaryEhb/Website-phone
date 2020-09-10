@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Future Mobile | Gallery</title>
+    <!-- Designed by Mary.E https://www.linkedin.com/in/mariem-ehab-1431301b3/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Monda&display=swap" rel="stylesheet"> 
+    <Link rel="stylesheet" href="../../css/style.css"/>
+    <Link rel="stylesheet" href="../../css/gallery.css"/>
+</head>
+<body>
+
+    <header class="">
+        <!--This is the Navigation bar which contains the Logo and other pages links-->
+        <div class="navigation capital grey-bg">
+            <div class="container nav-container">
+                <div><a href="../../index.html">logo</a></div>
+
+                <!--nav-->
+                <nav class="lg-screens">
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="Products.html">Products</a></li>
+                        <li class="main-color"><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </div>
+
+        <div class="intro">
+            <div class="">
+                <h1 class="capital main-color">Heading of Gallery</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+        </div>    
+
+    </header>
+
+    <!--gallery-->
+    <div class="container">
+    <div class="gallery">
+        <div class="flex-column">
+            <div class="img-container">
+                <img src="../images/gallary13.jpg" alt="Gallery image">
+            </div>
+            <div class="img-container">
+                <img src="../images/gallary2.jpg" alt="Gallery image">
+            </div>
+            <div class="img-container">
+                <img src="../images/gallary3.jpg" alt="Gallery image">
+            </div>
+            <div class="img-container">
+                <img src="../images/gallary1.jpg" alt="Gallery image">
+            </div>
+            <div class="img-container">
+                <img src="../images/gallary10.jpg" alt="Gallery image">
+            </div>
+        </div>
+        <div class="flex-column">
+            <div class="img-container">
+                <img src="../images/gallary4.jpg" alt="Gallery image">
+            </div>
+            <div class="img-container">
+                <img src="../images/gallary5.jpg" alt="Gallery image">
+            </div>
+            <div class="img-container">
+                <img src="../images/gallary6.jpg" alt="Gallery image">
+            </div>
+            <div class="img-container">
+                <img src="../images/gallary11.jpg" alt="Gallery image">
+            </div>
+        </div>
+        <div class="flex-column">
+            <div class="img-container">
+                <img src="../images/gallary9.jpg" alt="Gallery image">
+            </div>
+            <div class="img-container">
+                <img src="../images/gallary12.jpg" alt="Gallery image">
+            </div>
+            <div class="img-container">
+                <img src="../images/gallary8.jpg" alt="Gallery image">
+            </div>
+            <div class="img-container">
+                <img src="../images/gallary7.jpg" alt="Gallery image">
+            </div>
+            <div class="img-container">
+                <img src="../images/man.jpg" alt="Gallery image">
+            </div>
+            <div class="img-container">
+                <img src="../images/phone.jpg" alt="Gallery image">
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <!--Footer of the page-->
+    <footer>
+        <div class="container capital">
+            <ul>
+
+                <li><a href="">help</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Q&A</a></li>
+                <li><a href="">Contact us</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="">Shipping</a></li>
+                <li><a href="">returns</a></li>
+                <li><a href="">deals</a></li>
+                <li><a href="">new arrivals</a></li>
+            </ul>
+            <ul>
+                <li><a href="">careers</a></li>
+                <li><a href="">trainings</a></li>
+                <li><a href="">events</a></li>
+                <li><a href="">explore</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="">Sign up</a></li>
+                <li><a href="">login</a></li>
+                <li><a href="">events</a></li>
+                <li><a href=""></a></li>
+            </ul>
+            
+        </div>
+        <div class="copy-rights">
+            <div class="container">
+                <p>Copyright &copy;2020 your company </p>
+                <p>| designed by: Mary.E</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        /*variables*/
+        const introText = document.querySelector('.intro');
+        const images = document.querySelectorAll('.gallery img');
+
+        /*functions*/
+        introFunction = ()=>{
+            introText.style.opacity = "1";
+            introText.style.transform = "translateX(0)"; 
+        };
+        introFunction();
+
+        /*events*/
+        images.forEach(img=>{
+            img.addEventListener('click',(e) =>{
+            
+                //create Overlay Element
+                let overlay = document.createElement("div");
+                
+                //Add Class To Overlay
+                overlay.className = "overlay";
+                
+                //Append the overlay Element to the body
+                document.body.appendChild(overlay);
+                
+                //create popup box
+                let popupBox = document.createElement("div");
+                
+                //Add class to PopUp
+                popupBox.className = "popup";
+                
+                //Append the popupBox Element to the body
+                document.body.appendChild(popupBox);
+                
+                // Put label to img 
+                if(img.alt !== null){
+                    let label = document.createElement("h2");
+                    label.setAttribute('class',"img-label main-color") ;
+                    let labelText = document.createTextNode(img.alt);
+                    label.appendChild(labelText);
+                    popupBox.appendChild(label);
+                }
+                
+                
+                //create image
+                let popupImg = document.createElement("img");
+
+                popupImg.src = img.src;
+                
+                //Append the popupImg Element to the popupBox
+                popupBox.appendChild(popupImg);
+                
+                
+                //create the close button
+                let closeButton = document.createElement("span");
+                
+                //create the close button text
+                let buttonText = document.createTextNode("X");
+                
+                //append text to button
+                closeButton.appendChild(buttonText);
+                
+                //Add class To Button
+                closeButton.setAttribute('class','popup-close main-color');
+
+                popupBox.appendChild(closeButton);
+                
+                overlay.addEventListener('click',(e) => {
+                    overlay.remove();
+                    popupBox.remove();
+                });
+                closeButton.addEventListener('click',(e) => {
+                    overlay.remove();
+                    popupBox.remove();
+                });
+
+            });
+        });
+
+    //edit 1
+    //create loading overlay
+
+    const loading = document.createElement("div");
+    loading.innerHTML = " <div class='load'><hr/><hr/><hr/><hr/></div>";
+    loading.setAttribute('style','width:100vw;height:100vh;background-color:#f1f1f1;z-index:1000;position:fixed;top:0;left:0;transition:all ease-in-out 2s');
+    document.body.appendChild(loading);
+
+
+    window.addEventListener('load',function(){
+        loading.style.opacity = "0";
+        setTimeout(function(){
+            loading.style.display = "none";
+        },2000);
+    });
+    </script>
+</body>
+</html>

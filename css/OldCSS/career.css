@@ -1,0 +1,12 @@
+.intro{
+    width:100vw;
+    height: 400px;
+    background-image: url('../assests/images/career.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer{
+    margin-top: 2000px;
+}
