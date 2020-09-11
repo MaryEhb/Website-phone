@@ -1,0 +1,91 @@
+.intro{
+    width:100vw;
+    height: 400px;
+    background: {
+        image: url('../assests/images/about.jpg');
+        position:center;
+        repeat: no-repeat;
+        size: cover;
+    }
+}
+
+.section1 svg,.section3 svg{
+    max-width: 50%;
+    @media (max-width:650px){
+        max-width: 100%;
+    }
+}
+
+.section1 div,.section3 div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.section2 {
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+
+        h2{
+            line-height: 1.3rem;
+        }
+    }
+
+    .boxs{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4rem;
+        width: 100%;
+
+        @media (max-width:650px){
+            flex-direction: column;
+        }
+
+        .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            max-width: 300px;
+            min-height:300px ;
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 1rem;
+
+            @media (max-width:1000px){
+                transform: scale(.9);
+            }
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width:800px){
+    .section3{
+        text-align: center;
+    }
+    .section3 .btn{
+        align-self: center;
+        padding: .5rem;
+    }
+
+    .section3,.section1{
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    
+}
+
+

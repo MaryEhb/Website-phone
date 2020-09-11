@@ -1,0 +1,47 @@
+/*Start Navigation*/
+.navigation{
+    font-size: 1.5rem;
+    padding-top: 1rem;
+
+    .container{
+        border-bottom: 1px solid #cfcfcf;
+        padding-bottom: 1rem;
+    }
+
+    .nav-container{
+        align-items: center;
+    }
+
+    .logo{
+        @media (max-width:800px){
+            margin-bottom: .5rem;
+        }
+    }
+
+    li{
+        padding-left: .75rem;
+        cursor: pointer;
+        transition: all .15s ease-in-out;
+        :hover{
+            color:#FF6B00;
+            transform: scale(1.1);
+            
+        }
+        :active{
+            transform: scale(.97);
+        }
+    }
+
+    @media (max-width:800px){
+        font-size:1.25rem;
+    }
+}
+
+@media (max-width:800px){
+
+    header h1{
+        margin-bottom: 1rem;
+    }
+
+}
+/*End Navigation*/

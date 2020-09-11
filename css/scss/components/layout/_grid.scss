@@ -1,0 +1,17 @@
+
+.container{
+        margin: 0 auto;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding:0 1.5rem;
+
+    @media (max-width:800px){
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+    }
+}

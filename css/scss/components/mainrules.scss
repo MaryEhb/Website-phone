@@ -1,0 +1,140 @@
+/*Main Rulez*/
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+::selection{
+    background-color: $primaryColor;
+    color: #fff;
+}
+
+body{
+    font-size: 1.25rem;
+    font-family: 'Monda', sans-serif;
+    color:#6d6d6d;
+    overflow-x: hidden;
+
+    @media (max-width:650px){
+        font-size: 1rem;  
+    }
+}
+
+section{
+    margin-bottom:100px ;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color:inherit
+}
+
+br{
+    margin-bottom: .75rem;
+}
+
+.grey-bg{
+    background-color: $mainBackground;
+}
+
+.main-color{
+    color: $primaryColor;
+}
+
+.light-color{
+    color: $textColor;
+}
+
+.capital{
+    text-transform: capitalize;
+}
+
+.sub-text{
+    font-size: 1rem;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column !important;
+}
+/*classes used in js*/
+
+.opacity{
+    opacity: 0;
+}
+
+.position-appear{
+    transition:all 1s ease-in-out;
+    transform: translateY(20px);
+}
+
+.fade-in{
+    opacity: 1;
+    transform:translateY(0);
+}
+
+
+/*loading*/
+.load{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:100px;
+    height:100px;
+    
+    :first-child{
+        background:#3491ff;
+        animation-delay:-1.5S;
+    }
+    :nth-child(2){
+        background:$primaryColor;
+        animation-delay:-1S;
+    }
+    :nth-child(3){
+        background:#9c9c9c;
+        animation-delay:-0.5S;
+    }
+    :last-child{
+        background:#19fc4b;
+    }
+
+    hr{
+        border:0;
+        margin:0;
+        width:40%;
+        height:40%;
+        position:absolute;
+        border-radius:50%;
+        animation: spin 2s ease infinite;
+    }
+
+
+}
+
+@keyframes spin{
+	0%,100%{
+		transform:translate(0);
+	}
+	25%{
+		transform:translate(160%);
+	}
+	50%{
+		transform:translate(160%,160%);
+	}
+	75%{
+		transform:translate(0,160%);
+	}
+}
